@@ -17,6 +17,15 @@ from babeldoc.translator.translator import BaseTranslator
 logger = logging.getLogger(__name__)
 
 
+class ConfigModel:
+    """Compatibility helper for old tests."""
+
+    @staticmethod
+    def _page_range_pattern() -> str:
+        """Return regex pattern for page range strings."""
+        return r"^([0-9]*-?[0-9]*\s*,\s*)*([0-9]*-?[0-9]*)\s*$"
+
+
 class WatermarkOutputMode(enum.Enum):
     Watermarked = "watermarked"
     NoWatermark = "no_watermark"

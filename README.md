@@ -345,10 +345,16 @@ Please note:
    ```
 
 > [!TIP]
-> 
+>
 > 1. The offline assets package name cannot be modified because the file list hash is encoded in the name.
 > 2. When using in production environments, it's recommended to pre-generate the assets package and include it with your application distribution.
 > 3. The package verification ensures that all required assets are intact and match their expected checksums.
+
+### Troubleshooting
+
+**"The document contains no paragraphs" error**
+
+If BabelDOC raises this error, no selectable text was detected in the PDF. The file might be a scanned document. Run the CLI with `--auto-enable-ocr-workaround` to automatically enable OCR processing.
 
 ## Background
 
